@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maison Céleste — Boutique gourmet de bolos artísticos e elixires prensados a frio. Arte gastronômica de alta costura." />
+  <title>Maison Céleste | Bolos Artísticos & Elixires</title>
+
+  <!-- Google Fonts: Cormorant Garamond (títulos) + Plus Jakarta Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#hero" class="logo" aria-label="Maison Céleste — Início">
+        <span class="logo__mark" aria-hidden="true">✦</span>
+        <span class="logo__text">Maison Céleste</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#grife" class="nav__link">A Grife</a>
+        <a href="#cardapio" class="nav__link">Coleções</a>
+        <a href="#concierge" class="nav__link">Concierge</a>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="btn-cart" id="btn-cart" aria-label="Abrir sacola">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cart-count" hidden>0</span>
+        </button>
+        <button type="button" class="btn-admin" id="btn-admin" aria-label="Acesso administrativo" title="Admin">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal">Boutique Gastronômica</p>
+        <h1 class="hero__title reveal">
+          O doce elevado<br />à condição de arte
+        </h1>
+        <p class="hero__subtitle reveal">
+          Bolos assinados com técnicas francesas e elixires prensados a frio — 
+          uma coleção de experiências sensoriais para ocasiões que merecem ser lembradas.
+        </p>
+        <a href="#cardapio" class="btn btn--outline reveal">Explorar a Coleção</a>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__glow"></div>
+      </div>
+    </section>
+
+    <!-- ========== A GRIFE ========== -->
+    <section class="grife" id="grife">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Nossa Essência</p>
+          <h2 class="section-title">A Grife</h2>
+        </header>
+
+        <div class="grife__grid">
+          <article class="grife__pillar reveal">
+            <span class="grife__number">01</span>
+            <h3>Ingredientes Orgânicos</h3>
+            <p>Selecionamos produtores de confiança. Cacau de origem única, farinhas ancestrais, frutas de estação e especiarias raras — cada elemento tem história e pureza.</p>
+          </article>
+          <article class="grife__pillar reveal">
+            <span class="grife__number">02</span>
+            <h3>Técnicas Francesas</h3>
+            <p>Mousseline, pâte sablée, génoise e glaçages de precisão. A confeitaria clássica encontra o olhar contemporâneo em cada camada e cada detalhe.</p>
+          </article>
+          <article class="grife__pillar reveal">
+            <span class="grife__number">03</span>
+            <h3>Prensagem a Frio</h3>
+            <p>Nossos elixires preservam enzimas e nutrientes. Extração lenta, sem calor, para uma nutrição viva que acompanha o prazer do sabor.</p>
+          </article>
+          <article class="grife__pillar reveal">
+            <span class="grife__number">04</span>
+            <h3>Sustentabilidade Elegante</h3>
+            <p>Embalagens compostáveis, logística consciente e desperdício zero. O luxo verdadeiro respeita o que o sustenta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CARDÁPIO ========== -->
+    <section class="cardapio" id="cardapio">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Coleções Assinadas</p>
+          <h2 class="section-title">O Cardápio</h2>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs reveal" role="tablist" aria-label="Categorias do cardápio">
+          <button type="button" class="tabs__btn is-active" role="tab" aria-selected="true" data-tab="bolos">
+            Bolos Assinados
+          </button>
+          <button type="button" class="tabs__btn" role="tab" aria-selected="false" data-tab="sucos">
+            Elixires
+          </button>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters reveal" id="filters">
+          <button type="button" class="filter-chip is-active" data-filter="all">Todos</button>
+          <button type="button" class="filter-chip" data-filter="sem-gluten">Sem Glúten</button>
+          <button type="button" class="filter-chip" data-filter="vegano">Vegano</button>
+          <button type="button" class="filter-chip" data-filter="zero-acucar">Zero Açúcar</button>
+        </div>
+
+        <!-- Grid de produtos (preenchido via JS) -->
+        <div class="products-grid" id="products-grid" role="tabpanel"></div>
+      </div>
+    </section>
+
+    <!-- ========== CONCIERGE ========== -->
+    <section class="concierge" id="concierge">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-eyebrow">Atendimento Personalizado</p>
+          <h2 class="section-title">Concierge</h2>
+        </header>
+
+        <div class="concierge__layout">
+          <!-- FAQ Accordion -->
+          <div class="faq reveal">
+            <h3 class="faq__title">Perguntas Frequentes</h3>
+            <div class="accordion" id="accordion">
+              <div class="accordion__item">
+                <button type="button" class="accordion__trigger" aria-expanded="false">
+                  <span>Qual o prazo mínimo para encomendas?</span>
+                  <svg class="accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion__panel">
+                  <p>Bolos assinados: 48 horas úteis. Elixires e combos: 24 horas. Para eventos e quantidades especiais, recomendamos 5 a 7 dias para garantirmos a excelência de cada detalhe.</p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <button type="button" class="accordion__trigger" aria-expanded="false">
+                  <span>Vocês entregam em toda a cidade?</span>
+                  <svg class="accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion__panel">
+                  <p>Sim. Entregamos em toda a região metropolitana com embalagem térmica e protocolo de cuidado. Taxa de entrega calculada conforme a distância no momento do pedido via WhatsApp.</p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <button type="button" class="accordion__trigger" aria-expanded="false">
+                  <span>É possível personalizar um bolo?</span>
+                  <svg class="accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion__panel">
+                  <p>Absolutamente. Nossa equipe de confeitaria cria peças sob medida — do sabor à decoração. Conte-nos a ocasião e o estilo desejado no Concierge; transformamos a ideia em obra.</p>
+                </div>
+              </div>
+              <div class="accordion__item">
+                <button type="button" class="accordion__trigger" aria-expanded="false">
+                  <span>Os sucos são realmente prensados a frio?</span>
+                  <svg class="accordion__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion__panel">
+                  <p>Sim. Utilizamos prensa hidráulica a frio, sem oxidação por calor. Os elixires são preparados sob demanda e devem ser consumidos em até 72 horas sob refrigeração para máxima vitalidade.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário de contato -->
+          <div class="contact-form-wrap reveal">
+            <h3 class="contact-form__title">Fale com o Concierge</h3>
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-field">
+                <input type="text" id="contact-name" name="name" required placeholder=" " autocomplete="name" />
+                <label for="contact-name">Nome completo</label>
+              </div>
+              <div class="form-field">
+                <input type="email" id="contact-email" name="email" required placeholder=" " autocomplete="email" />
+                <label for="contact-email">E-mail</label>
+              </div>
+              <div class="form-field">
+                <textarea id="contact-message" name="message" rows="4" required placeholder=" "></textarea>
+                <label for="contact-message">Sua mensagem</label>
+              </div>
+              <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
+              <p class="form-feedback" id="form-feedback" hidden></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__mark">✦</span>
+        <span class="logo__text">Maison Céleste</span>
+        <p>Arte gastronômica · Desde 2019</p>
+      </div>
+      <p class="footer__copy">© <span id="year"></span> Maison Céleste. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ========== CART DRAWER ========== -->
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Sacola de compras" aria-hidden="true">
+    <div class="cart-drawer__header">
+      <h2>Sua Sacola</h2>
+      <button type="button" class="cart-drawer__close" id="cart-close" aria-label="Fechar sacola">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cart-items">
+      <!-- Itens via JS -->
+    </div>
+    <div class="cart-drawer__footer">
+      <div class="cart-summary">
+        <div class="cart-summary__row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">R$ 0,00</span>
+        </div>
+        <div class="cart-summary__row">
+          <span>Entrega (estimada)</span>
+          <span id="cart-delivery">R$ 25,00</span>
+        </div>
+        <div class="cart-summary__row cart-summary__total">
+          <span>Total</span>
+          <span id="cart-total">R$ 0,00</span>
+        </div>
+      </div>
+      <button type="button" class="btn btn--primary btn--full" id="btn-checkout">
+        Finalizar Pedido na Boutique
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========== ADMIN LOGIN MODAL ========== -->
+  <div class="modal-overlay" id="admin-overlay" hidden>
+    <div class="modal admin-modal" role="dialog" aria-labelledby="admin-title" aria-modal="true">
+      <button type="button" class="modal__close" id="admin-close" aria-label="Fechar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="admin-modal__icon" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0110 0v4"/>
+        </svg>
+      </div>
+      <h2 id="admin-title">Acesso Administrativo</h2>
+      <p class="admin-modal__hint">Insira a chave mestra para continuar</p>
+      <form id="admin-form" class="admin-form">
+        <div class="form-field">
+          <input type="password" id="admin-password" name="password" required placeholder=" " autocomplete="current-password" />
+          <label for="admin-password">Senha</label>
+        </div>
+        <p class="admin-error" id="admin-error" hidden>Senha incorreta. Tente novamente.</p>
+        <button type="submit" class="btn btn--primary btn--full">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========== ADMIN DASHBOARD ========== -->
+  <div class="admin-dashboard" id="admin-dashboard" hidden>
+    <header class="admin-dash__header">
+      <div class="admin-dash__brand">
+        <span class="logo__mark">✦</span>
+        <span>Dashboard · Maison Céleste</span>
+      </div>
+      <button type="button" class="btn btn--outline btn--sm" id="admin-logout">Sair</button>
+    </header>
+
+    <div class="admin-dash__content">
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <p class="kpi-card__label">Faturamento Bruto (Mês)</p>
+          <p class="kpi-card__value" id="kpi-revenue">R$ 48.720</p>
+          <p class="kpi-card__delta positive">+12,4% vs mês anterior</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-card__label">Ticket Médio</p>
+          <p class="kpi-card__value" id="kpi-ticket">R$ 286</p>
+          <p class="kpi-card__delta positive">+8,1%</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-card__label">Taxa de Conversão</p>
+          <p class="kpi-card__value" id="kpi-conversion">4,8%</p>
+          <p class="kpi-card__delta neutral">estável</p>
+        </article>
+        <article class="kpi-card">
+          <p class="kpi-card__label">Pedidos Ativos</p>
+          <p class="kpi-card__value" id="kpi-orders">17</p>
+          <p class="kpi-card__delta">em preparo / envio</p>
+        </article>
+      </div>
+
+      <!-- Meta do mês -->
+      <div class="goal-card">
+        <div class="goal-card__header">
+          <h3>Meta de Faturamento — Setembro</h3>
+          <span class="goal-card__pct" id="goal-pct">81%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar__fill" id="goal-fill" style="width: 81%"></div>
+        </div>
+        <p class="goal-card__detail">R$ 48.720 de R$ 60.000</p>
+      </div>
+
+      <!-- Gráfico por categoria -->
+      <div class="category-chart">
+        <h3>Vendas por Categoria</h3>
+        <div class="bar-chart">
+          <div class="bar-chart__row">
+            <span class="bar-chart__label">Bolos</span>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill bar-chart__fill--cake" style="width: 68%"></div>
+            </div>
+            <span class="bar-chart__value">68%</span>
+          </div>
+          <div class="bar-chart__row">
+            <span class="bar-chart__label">Elixires</span>
+            <div class="bar-chart__track">
+              <div class="bar-chart__fill bar-chart__fill--juice" style="width: 32%"></div>
+            </div>
+            <span class="bar-chart__value">32%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabela de pedidos -->
+      <div class="orders-table-wrap">
+        <h3>Pedidos Recentes</h3>
+        <div class="table-scroll">
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Itens</th>
+                <th>Canal</th>
+                <th>Valor</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="orders-tbody">
+              <!-- Preenchido via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
